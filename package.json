@@ -1,0 +1,12 @@
+{
+	"dependencies": {},
+	"devDependencies": {
+		"postcss": "^8.2.4",
+		"tailwindcss": "^3.1.0"
+	},
+	"private": true,
+	"scripts": {
+		"dev": "tailwindcss -i dash-test.pcss -o dash-test.css --postcss",
+		"watch": "tailwindcss -i dash-test.pcss -o dash-test.css --watch --postcss"
+	}
+}

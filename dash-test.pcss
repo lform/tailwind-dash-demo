@@ -1,0 +1,26 @@
+@layer utilities {
+	.h-ms {
+		// Works fine
+		@apply font-header leading-tight;
+	}
+
+	.h-ms-1 {
+		// Works fine
+		@apply h-ms text-ms-1 font-bold;
+	}
+
+	.-h-ms-1 {
+		// Works fine, `-text-ms-1` is defined in the tailwind config
+		@apply h-ms -text-ms-1 font-bold;
+	}
+
+	.new-class {
+		// This throws the below error
+		@apply -h-ms-1 italic;
+	}
+}
+
+/* Tailwinds Boot Components */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
